@@ -55,10 +55,12 @@ function makeSound() {
 function makeSound1() {
   document.getElementById("sound2").play();
 }
-function duplicate()
-{
-let div = duplicate("div");
-    div.id = "frog1";
-div.appendChild(duplicate("frog1"));
+let i = 0;
+let original = document.getElementById('frog1');
+
+function duplicate() {
+   let clone = original.cloneNode(true); 
+    clone.id = "frog1" + ++i;
+    original.parentNode.appendChild(clone);
 }
 </script>
