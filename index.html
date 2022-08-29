@@ -32,8 +32,8 @@
 </style>
 <div id="grid">
   <div id="frog1"><img src="media/froggy.png" onmouseover="makeSound()" onclick="duplicate()"></div>
-  <div><img src="media/froggy1.png" onclick="makeSound1()" ></div>
-  <div><img src="media/froggy.png" onclick="makeSound()"></div>
+  <div id="frog2"><img src="media/froggy1.png" onclick="makeSound1()" onclick="makeSmaller()" ></div>
+  <div id="frog3"><img src="media/froggy.png" onclick="makeSound()"></div>
   <div><img src="media/froggy1.png" onclick="makeSound1()"></div>
   <div><img src="media/froggy.png" onclick="makeSound()"></div>
   <div><img src="media/froggy1.png" onclick="makeSound1()"></div>
@@ -62,5 +62,10 @@ function duplicate() {
    let clone = original.cloneNode(true); 
     clone.id = "frog1" + ++i;
     original.parentNode.appendChild(clone);
+}
+  
+function makeSmaller() {
+  let myFroggy = document.getElementById("frog3");
+  myFroggy.style.height = "2em";
 }
 </script>
