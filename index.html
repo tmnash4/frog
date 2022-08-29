@@ -31,10 +31,11 @@
   }
  #freeFrog {
    width: 4em;
+   position: relative;
   }
 </style>
 
-<div> <img id="freeFrog" src="media/froggy.png"> </div>
+<div> <img id="freeFrog" src="media/froggy.png" onclick="MoveEffect(this)"> </div>
 
 <div id="grid">
   <div id="frog1"><img src="media/froggy.png" onmouseover="makeSound()" onclick="duplicate()"></div>
@@ -50,6 +51,19 @@
 
 
 <script>
+    
+  function MoveEffect(element){
+            new Effect.MoveBy(element,
+               {
+                  x:10,
+                  y:10,
+                  duration:1
+               }
+            )
+         }
+  
+
+  
   document.addEventListener('keydown', function(e) {
   if (e.keyCode == 65) {
     document.getElementById("iFrame").play();
