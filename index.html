@@ -31,7 +31,7 @@
   }
 </style>
 <div id="grid">
-  <div><img src="media/froggy.png" onclick="makeSound()"></div>
+  <div id="frog1"><img src="media/froggy.png" onclick="makeSound()" onclick="duplicate()"></div>
   <div><img src="media/froggy.png" onclick="makeSound1()" ></div>
   <div><img src="media/froggy.png" onclick="makeSound()"></div>
   <div><img src="media/froggy.png" onclick="makeSound1()"></div>
@@ -55,7 +55,10 @@ function makeSound() {
 function makeSound1() {
   document.getElementById("sound2").play();
 }
-function createFrog {
-  document.createElement("div");
+function duplicate()
+{
+let div = duplicate("div");
+    div.id = "frog1";
+div.appendChild(duplicate("frog1"));
 }
 </script>
