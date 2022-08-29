@@ -35,7 +35,7 @@
   }
 </style>
 
-<div> <img id="freeFrog" src="media/froggy.png" onclick="MoveEffect(this)"> </div>
+<div> <img id="freeFrog" src="media/froggy.png"> </div>
 
 <div id="grid">
   <div id="frog1"><img src="media/froggy.png" onmouseover="makeSound()" onclick="duplicate()"></div>
@@ -52,15 +52,15 @@
 
 <script>
     
-  function MoveEffect(element){
-            new Effect.MoveBy(element,
-               {
-                  x:10,
-                  y:10,
-                  duration:1
-               }
-            )
-         }
+document.addEventListener('keydown', function(e) {
+  let freeFrog = document.getElementById("freeFrog");
+  if (e.which === 37) {
+    var leftNumbers = freeFrog.style.left.replace('px', '')
+    var left = parseInt(leftNumbers, 10)
+
+    freeFrog.style.left = `${left - 1}px`
+  }
+})
   
 
   
