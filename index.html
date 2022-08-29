@@ -27,7 +27,10 @@
     width: 5em;
     display: grid;
     justify-content: center
-    
+      
+  }
+ #freeFrog {
+   width: 4em;
   }
 </style>
 <div id="grid">
@@ -40,6 +43,9 @@
   <div><img src="media/froggy.png" onclick="makeSound()"></div>
   <div><img src="media/froggy1.png" onclick="makeSound1()"></div>
 </div>
+
+<div id="freeFrog" src="media/froggy.png">
+
 
 <script>
   document.addEventListener('keydown', function(e) {
@@ -68,4 +74,6 @@ function makeSmaller() {
   let myFroggy = document.getElementById("frog3");
   myFroggy.style.width = "50px";
 }
+  
+
 </script>
