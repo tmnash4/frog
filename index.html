@@ -51,25 +51,7 @@
 
 
 <script>
-    
-document.addEventListener('keydown', function(e) {
-  let freeFrog = document.getElementById("freeFrog");
-  if (e.which === 37) {
-    var leftNumbers = freeFrog.style.left.replace('px', '')
-    var left = parseInt(leftNumbers, 10)
-
-    freeFrog.style.left = `${left - 1}px`
-  }
-})
-  
-
-  
-  document.addEventListener('keydown', function(e) {
-  if (e.keyCode == 65) {
-    document.getElementById("iFrame").play();
-  }
-});
-
+ 
 function makeSound() {
   document.getElementById("iFrame").play();
 }
