@@ -667,7 +667,9 @@ function duplicate() {
       cloneArray.shift().remove()
     } else if (e.key == "s") {
       cl.classList.remove("moveAgain")
-    } else if (e.key == "b") {
+    } else if (e.key == "d") {
+	    duplicate()
+    }else if (e.key == "b") {
       cl.style.setProperty('--animationTime', randAnTime + "s");
       cl.classList.add("moveAgain1")
     } else if (e.key == "n") {
