@@ -339,8 +339,7 @@ async function playBackground() {
 original.style.opacity = "1";
 original.style.animation = "fadeIn 10s"
 }
-var socketName = "default";
-var socket = io();  
+
 
 let frogMainArray = []
 
@@ -479,14 +478,6 @@ function moveFrog4() {
     } 
   }
 }
-
-
-
-
-socket.on(('connectToRoom', function(data) {
-  document.body.innerHTML = data;
-  // document.write(data)
-}))
 
 
 //one onhover = frogs anywhere/
@@ -712,10 +703,6 @@ function duplicate() {
 let body = document.querySelector("body");
 
 
-socket.on("hide_button", () => {
- hideButton()
-})
-
 function hideButton() {
   mainButton.style.opacity = "0"
 }
@@ -738,7 +725,6 @@ function changeSound() {
 
 </meta>
 <!-- partial -->
-  <script src="/socket.io/socket.io.js"></script>
 
   <script src='tone.js'></script><script  src="./script.js"></script>
 
