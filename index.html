@@ -662,11 +662,11 @@ function duplicate() {
       //cloneArray[i].style.opacity = 1
     })
   }
-    if (e.key == "D") {
+    if (e.key == "ArrowDown") {
       cloneArray.shift().remove()
     } else if (e.key == "s") {
       cl.classList.remove("moveAgain")
-    } else if (e.key == "d") {
+    } else if (e.key == "ArrowUp") {
 	    duplicate()
     }else if (e.key == "b") {
       cl.style.setProperty('--animationTime', randAnTime + "s");
@@ -682,10 +682,10 @@ function duplicate() {
       // })
      } else if (e.key == "r") {
       cl.classList.remove("frogDissapear")
-     } else if (e.key == "q") {
+     } else if (e.key == "f") {
       // let indClone = document.getElementById(`originalFrog${l}`);
       for(l=0;l<frogMainArray.length;l++) {
-        frogMainArray[l].style.animation = "fadeOut 1s"
+        frogMainArray[l].style.animation = "fadeOut 1.5s"
         frogMainArray[l].classList.add("frogDissapear");
     
         // if (cloneArray.classList.contains(""))
