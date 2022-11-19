@@ -20,7 +20,10 @@
     <div class="space">.</div>
     <div class="space">.</div>
     <div class="space">.</div>
-    <div id="para"> Art by Nick Barrett</div>
+    <div id="para"> by Treya Nash </div>
+	<div class="space"> .</div>
+	    <div> Art by Nick Barrett </div>
+
 
 </div>
 
@@ -576,7 +579,7 @@ function duplicate() {
 
   frogMainArray.push(clone)
   if (cloneArray.length > 200) {
-	  cloneArray.shift().remove()
+	cloneArray.shift().remove()
   }
   let panner1 =  new Tone.Panner(getScaledValue(randomPos1, 0, 100, -1, 1)).connect(mainGain)
   let randAudio = Math.floor(Math.random() * (audioArray.length))
