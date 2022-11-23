@@ -342,9 +342,11 @@ async function startAudio() {  //This code starts the audio
 let mainGain = new Tone.Gain(0).toDestination()
 mainGain.gain = 0
 
+
 let frogBackBuffer = new Tone.Buffer("media/background3.mp3")
 let frogBack = new Tone.Player(frogBackBuffer)
 frogBack.connect(mainGain);
+frogBack.loop = true;						    
 
 async function playBackground() {
   await Tone.start()
