@@ -561,6 +561,8 @@ let frogImage6 = "media/frog_51.png"
 
 //let preAudioArray = [];
 
+let megaAudioArray =[frogAudio, frogAudio1, frogAudio37, frogAudio3, frogAudio29, frogAudio6, frogAudio, frogAudio1,frogAudio37, frogAudio3, frogAudio29, frogAudio6, frogAudio13, frogAudio14, frogAudio15, frogAudio16, frogAudio17, frogAudio18,frogAudio19, frogAudio20, frogAudio21, frogAudio22, frogAudio23, frogAudio24, frogAudio25, frogAudio26, frogAudio27, frogAudio28, frogAudio29, frogAudio30, frogAudio31, frogAudio32, frogAudio33, frogAudio35, frogAudio35, frogAudio36];    
+
 let audioArray = [frogAudio, frogAudio1, frogAudio37, frogAudio3, frogAudio29, frogAudio6];
 let audioArrayOrig = [frogAudio, frogAudio1,frogAudio37, frogAudio3, frogAudio29, frogAudio6];
 let audioArray1 = [frogAudio7, frogAudio8, frogAudio9, frogAudio10, frogAudio11, frogAudio12];
@@ -612,8 +614,7 @@ function duplicate() {
 	cloneArray.shift().remove()
   }
   let panner1 =  new Tone.Panner(getScaledValue(randomPos1, 0, 100, -1, 1)).connect(mainGain)
-  let randAudio = Math.floor(Math.random() * (audioArray.length))
-  console.log(randAudio)
+  let randAudio = Math.floor(Math.random() * (megaAudioArray.length))
 
   if (frogMainArray.length > 10 && frogMainArray.length < 20) {
     audioArray = audioArray2
@@ -637,7 +638,7 @@ function duplicate() {
     console.log("g5")
 
   }
-  clone.myFrog1 = new Tone.Player(audioArray[randAudio]).connect(panner1); //choose random audio 
+  clone.myFrog1 = new Tone.Player(megaAudioArray[randAudio]).connect(panner1); //choose random audio 
   
   clone.myFrog1.fadeIn = 0.5; 
   clone.myFrog1.fadeOut = 0.5; //put a fade on the audio to reduce clicks if it restarts 
