@@ -368,7 +368,8 @@ let frogRoomLimit = 3;
 
 
 let mainButton = document.getElementById("mainButton");
-let para = document.getElementById("para")
+let para = document.querySelector("para")
+let para1 = document.querySelector("para1")
 
 
 
@@ -376,7 +377,8 @@ function startPiece() {
   mainButton.style.opacity = "0";
   playBackground();
   mainGain.gain.rampTo(1, 3);
-  para.style.opacity = "0"
+  para.style.opacity = "0";
+  para1.style.opacity = "0";
 }
 
 if (mainButton.innerHTML = "Click for Frog") {
