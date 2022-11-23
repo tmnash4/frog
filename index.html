@@ -160,10 +160,10 @@ html, body {
 }	
 .para2 {
   position: absolute;				      
-  top: 100vw;
+  top: 95vw;
   left: 0vw;					      
   font-family: Georgia;
-  font-size: 1.2em;
+  font-size: 1em;
   color: #589e96;
   transition: opacity 5s;
   opacity: 0
@@ -236,6 +236,7 @@ html, body {
   top: var(--startTop);
   transition: opacity 5s, width var(--animationTime), left var(--animationTime), top 10s;
   animation: fadeIn 2s
+	  
   
 }
 .frogStart2 {
@@ -394,7 +395,8 @@ function startPiece() {
   mainGain.gain.rampTo(1, 3);
   para.style.opacity = "0";
   para1.style.opacity = "0";
-  para2.style.opacity = "1"			   
+  para2.style.opacity = "1";
+  setTimeout(makeOpaque, 10000)
 }
 
 if (mainButton.innerHTML = "Click for Frog") {
@@ -752,8 +754,13 @@ function changeSound() {
 }
 
 original.addEventListener("touchstart", duplicate)					
-					
-					
+	
+function makeOpaque() {
+	para2.style.opacity = "0"
+}
+	
+	
+
 </script>
 
 </meta>
