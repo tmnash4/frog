@@ -693,11 +693,11 @@ function duplicate() {
       //cloneArray[i].style.opacity = 1
     })
   }
-    if (e.key == "ArrowDown") {
+    if (e.key == "ArrowDown" || e.key == "ArrowLeft") {
       cloneArray.shift().remove()
     } else if (e.key == "s") {
       cl.classList.remove("moveAgain")
-    } else if (e.key == "ArrowUp") {
+    } else if (e.key == "ArrowUp" || e.key == "ArrowRight") {
 	    duplicate()
     }else if (e.key == "b") {
       cl.style.setProperty('--animationTime', randAnTime + "s");
